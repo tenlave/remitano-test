@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ae5ce6c7-5041-4bd4-a8b9-546a5b4ce432" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/features/layout/components/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/features/layout/components/layout.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/features/layout/components/loadable.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/features/layout/components/login.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/features/layout/components/require-auth.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/features/layout/components/top-bar.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/features/layout/components/user-info.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/features/layout/styles/layout.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/features/layout/styles/login.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/features/layout/styles/top-bar.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/features/layout/styles/user-info.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/features/shared-video/components/shared-video.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/features/shared-video/styles/share-video.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/features/videos/components/video-item.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/features/videos/components/videos.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/features/videos/styles/video-item.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/features/videos/styles/video.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/consts/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/consts/local-storage.const.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/dtos/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/dtos/req-create-video.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/dtos/req-login.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/dtos/req-paging.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/dtos/res-login.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/dtos/res-paging.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/dtos/user.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/dtos/video.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/services/auth.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/services/base.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/services/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/services/user.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/services/video.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/states/authen.state.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/states/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/entities/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/entities/user.entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/entities/video.entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/consts/error.const.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/consts/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/dtos/auth.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/dtos/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/dtos/sign-in-success.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/dtos/token-user-info.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/guards/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/guards/jwt.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/strategies/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/strategies/jwt.strategy.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/strategies/local.strategy.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/video/dtos/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/video/dtos/req-create-video.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/video/dtos/res-video-list-item.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/ws_gateway/consts/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/ws_gateway/consts/ws-topic.const.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/ws_gateway/ws_gateway.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/ws_gateway/ws_gateway.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/shared/configs/database.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/shared/configs/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/shared/consts/cache.const.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/shared/consts/env.const.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/shared/consts/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/shared/decorators/jwt-user.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/shared/dtos/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/shared/dtos/req-paging.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/shared/dtos/res-base-paging.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/client" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2RFEFSrDhAPe8NPdh78GLLI3kiK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/projects/remote/remitano/youtube-sharing/client/src/features/videos/styles&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\projects\\remote\\remitano\\youtube-sharing\\client\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\remote\remitano\youtube-sharing\client\src\features\videos\styles" />
+      <recent name="D:\projects\remote\remitano\youtube-sharing\client\src\features\layout\styles" />
+      <recent name="D:\projects\remote\remitano\youtube-sharing\client\src\shared\dtos" />
+      <recent name="D:\projects\remote\remitano\youtube-sharing\client\src\shared\services" />
+      <recent name="D:\projects\remote\remitano\youtube-sharing\client\src\features\videos\components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\remote\remitano\youtube-sharing\server\src\shared" />
+      <recent name="D:\projects\remote\remitano\youtube-sharing\server\src" />
+      <recent name="D:\projects\remote\remitano\youtube-sharing\client\src\features\layout\components" />
+      <recent name="D:\projects\remote\remitano\youtube-sharing\client\src\shared\components" />
+      <recent name="D:\projects\remote\remitano\youtube-sharing\client\src\shared" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.start">
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.start:dev" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae5ce6c7-5041-4bd4-a8b9-546a5b4ce432" name="Changes" comment="" />
+      <created>1686837326731</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686837326731</updated>
+      <workItem from="1686837328602" duration="84000" />
+      <workItem from="1686837569431" duration="855000" />
+      <workItem from="1686928694765" duration="2370000" />
+      <workItem from="1686959394951" duration="9018000" />
+      <workItem from="1687052492464" duration="27003000" />
+      <workItem from="1687107852341" duration="134000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,22 @@
+.videoItem {
+  display: flex;
+  gap: 3em;
+  text-align: left;
+
+  .videoDesc {
+    .videoMetadata {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .videoTitle {
+        color: crimson;
+        font-weight: bold;
+      }
+
+      .likeButton {
+        font-size: 3em;
+      }
+    }
+  }
+}

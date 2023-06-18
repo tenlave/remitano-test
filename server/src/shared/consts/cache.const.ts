@@ -1,0 +1,3 @@
+export enum CACHE_CONST {
+  BLACKLIST_TOKEN = 'BLACKLIST_TOKEN',
+}
