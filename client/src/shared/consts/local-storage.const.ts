@@ -1,3 +1,3 @@
 export const LocalStorageConst = {
-  AuthenToken: 'token'
-}
+  AuthenToken: 'token',
+};

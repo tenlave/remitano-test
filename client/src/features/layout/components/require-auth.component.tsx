@@ -10,12 +10,8 @@ const RequireAuth: FC = () => {
   return userInfo ? (
     <Outlet />
   ) : (
-    <Navigate
-      to={''}
-      state={{ from: location }}
-      replace={true}
-    />
+    <Navigate to={''} state={{ from: location }} replace={true} />
   );
-}
+};
 
 export default RequireAuth;

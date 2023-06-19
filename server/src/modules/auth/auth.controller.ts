@@ -1,5 +1,4 @@
-import { Body, Controller, Post, UseGuards } from '@nestjs/common';
-import { AuthGuard } from '@nestjs/passport';
+import { Body, Controller, Post } from '@nestjs/common';
 import { throwError } from 'rxjs';
 import { AuthDto, SignInSuccessDto } from './dtos';
 import { AuthService } from './auth.service';

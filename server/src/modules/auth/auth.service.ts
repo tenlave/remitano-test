@@ -23,9 +23,14 @@ export class AuthService {
   }
 
   async signIn(req: AuthDto): Promise<SignInSuccessDto> {
-    const user = await this.userService.findOne(req.email);
+    let user = await this.userService.findOne(req.email);
 
-    if (!user || user.password != req.password)
+    if (!user) {
+      await this.signUp(req);
+      user = await this.userService.findOne(req.email);
+    }
+
+    if (user.password != req.password)
       throw new ForbiddenException(AuthErrorConst.SignInFail);
 
     return this.signToken(user.id, user.email);

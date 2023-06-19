@@ -5,8 +5,8 @@ export const http = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
   timeout: 10000,
   headers: {
-    'Content-Type': 'application/json'
-  }
+    'Content-Type': 'application/json',
+  },
 });
 
 http.interceptors.request.use(
@@ -19,7 +19,8 @@ http.interceptors.request.use(
       return config;
     }
 
-    let accessToken = localStorage.getItem(LocalStorageConst.AuthenToken) || '';
+    const accessToken =
+      localStorage.getItem(LocalStorageConst.AuthenToken) || '';
     if (accessToken) {
       config.headers.Authorization = `Bearer ${accessToken}`;
     }
@@ -27,5 +28,5 @@ http.interceptors.request.use(
   },
   function (error) {
     return Promise.reject(error);
-  }
+  },
 );

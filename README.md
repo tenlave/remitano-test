@@ -1,18 +1,25 @@
-# Build-and-Dockerize-a-Full-stack-React-app-with-Node.js-MySQL-and-Nginx-for-reverse-proxy
+# Guidelines
 
-Run `npm i` inside the client directory
-
-Run `npm i` inside the server directory
-
-Run `docker-compose up --build` inside the mainn project directory
-
-Access the Adminer using route `http://localhost:8000/`.
+1. **Prerequisites**
+    - node: v16
+    - mysql
+    - docker
 
 
-To log in, use `mysql_db` as the server Username as `root` and password as `MYSQL_ROOT_PASSWORD`.
+2. **Installation & Configuration**
 
-To start interacting with the application, open `http://localhost:3050/` on a browser.
+   - Run `npm i` inside the client directory
 
-Check out the step by step explained guide [here](https://www.section.io/engineering-education/build-and-dockerize-a-full-stack-react-app-with-nodejs-and-nginx/)
+   - Run `npm i` inside the server directory
 
-https://www.section.io/engineering-education/build-and-dockerize-a-full-stack-react-app-with-nodejs-and-nginx/
+   - Use `mysql_db` as the server Username as `root` and password as `1234556`
+
+   - User `mysql_db` and create new database `remitano-test`
+
+   - Run `npm run start` inside the client directory to start web application
+
+   - Run `npm run start` inside the server directory to start backend application
+
+   - Run `react-scripts test` to execute test suite
+
+[//]: # (   - Run `docker-compose up --build` inside the main project directory)

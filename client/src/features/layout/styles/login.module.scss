@@ -2,4 +2,14 @@
   height: 100%;
   align-items: center;
   justify-content: right;
+
+  :global {
+    .ant-form-item-has-error {
+      margin-bottom: 0;
+
+      .ant-form-item-explain {
+        display: none;
+      }
+    }
+  }
 }

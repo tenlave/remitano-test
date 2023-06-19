@@ -2,7 +2,7 @@ import { FC, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Col, Row } from 'antd';
 import { HomeOutlined } from '@ant-design/icons';
-import Title from 'antd/es/typography/Title';
+import Title from 'antd/lib/typography/Title';
 import Style from '../styles/top-bar.module.scss';
 import { useRecoilValue } from 'recoil';
 import { StateLoggedInUserInfo } from '../../../shared/states';
@@ -15,23 +15,21 @@ const TopBar: FC = () => {
   const userInfo = useRecoilValue<UserDto | null>(StateLoggedInUserInfo);
 
   const userInfoElement = useMemo(() => {
-    return userInfo ? <UserInfo />: <Login />
+    return userInfo ? <UserInfo data-testid="user-info" /> : <Login />;
   }, [userInfo]);
 
   return (
-    <Row className={Style.topBarContainer}>
+    <Row data-testid="top-bar" className={Style.topBarContainer}>
       <Col span={8}>
         <div className={Style.homeButton} onClick={() => navigate('/')}>
-          <HomeOutlined className={Style.homeIcon}/>
+          <HomeOutlined className={Style.homeIcon} />
           <Title level={3}>Funny Movies</Title>
         </div>
       </Col>
 
-      <Col span={16}>
-        {userInfoElement}
-      </Col>
+      <Col span={16}>{userInfoElement}</Col>
     </Row>
-  )
-}
+  );
+};
 
 export default TopBar;

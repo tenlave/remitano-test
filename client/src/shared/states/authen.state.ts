@@ -4,13 +4,8 @@ import { UserService } from '../services';
 
 export const StateAuthToken = atom<string>({
   key: 'AuthenState_Token',
-  default: ''
-})
-
-export const StateUser = atom<UserDto | null>({
-  key: 'AuthenState_User',
-  default: null
-})
+  default: '',
+});
 
 export const StateLoggedInUserInfo = selector<UserDto | null>({
   key: 'AuthenState_LoggedInUserInfo',
@@ -20,7 +15,6 @@ export const StateLoggedInUserInfo = selector<UserDto | null>({
       return null;
     }
     const res = await UserService.getUserInfo();
-    return res.data
+    return res.data;
   },
 });
-

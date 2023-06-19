@@ -7,41 +7,50 @@ import { ReqCreateVideoDto } from '../../../shared/dtos';
 import { VideoService } from '../../../shared/services';
 import { toast } from 'react-toastify';
 import { Col, Row } from 'antd';
+import useFormValidate from '../../../shared/hooks/form-validate.hook';
 
 const SharedVideo: FC = () => {
+  const [form] = Form.useForm<ReqCreateVideoDto>();
+  const { submittable } = useFormValidate(form);
 
   const submitFn = useCallback(async (body: ReqCreateVideoDto) => {
     await VideoService.createVideo(body);
     toast('Video created successfully');
-  }, [])
+  }, []);
 
   return (
     <Form
+      data-testid="share-video-form"
       layout="horizontal"
       autoComplete="off"
       className={Style.form}
       onFinish={submitFn}
     >
       <Row className={Style.formItem}>
-        <Col span={7}>
+        <Col span={6}>
           <div className={Style.title}>Youtube URL:</div>
         </Col>
-        <Col span={17}>
-          <Form.Item name="url" label=""  rules={[{ required: true }]}>
-            <Input />
+        <Col span={12}>
+          <Form.Item name="url" label="" rules={[{ required: true }]}>
+            <Input placeholder="url" />
           </Form.Item>
         </Col>
       </Row>
 
       <Row>
-        <Col span={17} offset={7}>
-          <Button type="primary" htmlType="submit">Share</Button>
+        <Col span={12} offset={6}>
+          <Button
+            data-testid="submit-form"
+            type="primary"
+            htmlType="submit"
+            disabled={!submittable}
+          >
+            Share
+          </Button>
         </Col>
       </Row>
-
-
     </Form>
-  )
-}
+  );
+};
 
-export default SharedVideo
+export default SharedVideo;

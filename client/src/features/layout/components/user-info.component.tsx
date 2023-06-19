@@ -14,29 +14,28 @@ const UserInfo: FC = () => {
 
   const logoutFn = useCallback(() => {
     setAuthenToken('');
-    localStorage.setItem(LocalStorageConst.AuthenToken, '')
+    localStorage.setItem(LocalStorageConst.AuthenToken, '');
   }, [setAuthenToken]);
 
   const navigateToShare = useCallback(() => {
-    navigate('/share')
+    navigate('/share');
   }, [navigate]);
 
-  return !userInfo
-    ? <></>
-    : (
-      <div className={Style.userInfoContainer}>
-        <span>Welcome {userInfo.email}</span>
+  return (
+    <div data-testid="user-info" className={Style.userInfoContainer}>
+      {userInfo && (
+        <>
+          <span>Welcome {userInfo.email}</span>
 
-        <Button type="primary" onClick={navigateToShare}>
-          Share a movie
-        </Button>
+          <Button type="primary" onClick={navigateToShare}>
+            Share a movie
+          </Button>
 
-        <Button onClick={logoutFn}>
-          Logout
-        </Button>
-      </div>
-    );
-
-}
+          <Button onClick={logoutFn}>Logout</Button>
+        </>
+      )}
+    </div>
+  );
+};
 
 export default UserInfo;

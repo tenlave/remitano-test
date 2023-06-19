@@ -1,5 +1,5 @@
 import { FC, useCallback, useEffect, useMemo, useState } from 'react';
-import Pagination from 'antd/es/pagination';
+import Pagination from 'antd/lib/pagination';
 import { VideoDto } from '../../../shared/dtos';
 import VideoItem from './video-item.component';
 import { VideoService } from '../../../shared/services';
@@ -9,40 +9,41 @@ const Videos: FC = () => {
   const pageSize = 10;
   const [pageIndex, setPageIndex] = useState<number>(1);
   const [videos, setVideos] = useState<VideoDto[]>();
-  const [total, setTotal] = useState<number>();
+  const [total, setTotal] = useState<number>(0);
+
+  const fetchData = useCallback(
+    async (skip: number, take: number = pageSize) => {
+      const { data } = await VideoService.getVideosList({ skip, take });
+      setVideos(data.data);
+      setTotal(data.total);
+    },
+    [],
+  );
 
   useEffect(() => {
     const skip = (pageIndex - 1) * pageSize;
     void fetchData(skip, pageSize);
-  }, [pageIndex]);
-
-  const fetchData = useCallback(async (skip: number, take: number = pageSize) => {
-    const { data } = await VideoService.getVideosList({ skip, take });
-    setVideos(data.data);
-    setTotal(data.total);
-  }, []);
+  }, [pageIndex, fetchData]);
 
   const videoListElement = useMemo(() => {
-    return !videos?.length
-      ? <></>
-      : (
-        <>
-          {videos?.map(videoItem => <VideoItem video={videoItem} />)}
-        </>
-      )
-  }, [videos])
+    return !videos?.length ? (
+      <></>
+    ) : (
+      <>
+        {videos?.map((videoItem) => (
+          <VideoItem key={videoItem.id} video={videoItem} />
+        ))}
 
-  return (
-    <div className={Style.videoContainer}>
-      {videoListElement}
+        <Pagination
+          onChange={(page: number) => setPageIndex(page)}
+          defaultCurrent={pageIndex}
+          total={total}
+        />
+      </>
+    );
+  }, [videos, total, pageIndex]);
 
-      <Pagination
-        onChange={(page: number) => setPageIndex(page)}
-        defaultCurrent={pageIndex}
-        total={total}
-      />
-    </div>
-  )
-}
+  return <div className={Style.videoContainer}>{videoListElement}</div>;
+};
 
 export default Videos;
